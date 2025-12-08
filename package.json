@@ -1,12 +1,12 @@
 {
-  "name": "typescript-library-template",
+  "name": "claude-chrome-permission-editor",
   "version": "0.0.0",
-  "description": "Template for creating TypeScript libraries",
+  "description": "Pre-approve permissions for the Claude for Chrome extension",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/domdomegg/typescript-library-template.git"
+    "url": "git@github.com:domdomegg/claude-chrome-permission-editor.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,12 +21,17 @@
     "build": "tsc --project tsconfig.build.json",
     "prepublishOnly": "npm run clean && npm run build"
   },
+  "dependencies": {
+    "classic-level": "^1.4.1"
+  },
   "devDependencies": {
+    "@types/node": "^22.15.29",
     "@tsconfig/node-lts": "^22.0.2",
     "eslint": "^9.32.0",
     "eslint-config-domdomegg": "^2.0.9",
     "tsconfig-domdomegg": "^1.0.0",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
-  }
+  },
+  "private": true
 }
